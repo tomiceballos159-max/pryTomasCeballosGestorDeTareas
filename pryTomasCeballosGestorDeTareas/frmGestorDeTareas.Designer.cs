@@ -32,9 +32,9 @@
             lblPrioridad = new Label();
             lblFecha = new Label();
             lblMisTareas = new Label();
-            txtTareas = new TextBox();
+            txtTarea = new TextBox();
             cmbPrioridad = new ComboBox();
-            dateTimePicker1 = new DateTimePicker();
+            dtpFecha = new DateTimePicker();
             btnAgregar = new Button();
             lstTarea = new CheckedListBox();
             btnCompletar = new Button();
@@ -77,12 +77,12 @@
             lblMisTareas.TabIndex = 3;
             lblMisTareas.Text = "MisTareas";
             // 
-            // txtTareas
+            // txtTarea
             // 
-            txtTareas.Location = new Point(67, 30);
-            txtTareas.Name = "txtTareas";
-            txtTareas.Size = new Size(201, 23);
-            txtTareas.TabIndex = 4;
+            txtTarea.Location = new Point(67, 30);
+            txtTarea.Name = "txtTarea";
+            txtTarea.Size = new Size(201, 23);
+            txtTarea.TabIndex = 4;
             // 
             // cmbPrioridad
             // 
@@ -94,12 +94,12 @@
             cmbPrioridad.Size = new Size(193, 23);
             cmbPrioridad.TabIndex = 5;
             // 
-            // dateTimePicker1
+            // dtpFecha
             // 
-            dateTimePicker1.Location = new Point(66, 104);
-            dateTimePicker1.Name = "dateTimePicker1";
-            dateTimePicker1.Size = new Size(210, 23);
-            dateTimePicker1.TabIndex = 6;
+            dtpFecha.Location = new Point(66, 104);
+            dtpFecha.Name = "dtpFecha";
+            dtpFecha.Size = new Size(210, 23);
+            dtpFecha.TabIndex = 6;
             // 
             // btnAgregar
             // 
@@ -109,13 +109,17 @@
             btnAgregar.TabIndex = 7;
             btnAgregar.Text = "Agregar";
             btnAgregar.UseVisualStyleBackColor = true;
+            btnAgregar.Click += btnAgregar_Click;
             // 
             // lstTarea
             // 
+            lstTarea.BackColor = Color.Turquoise;
+            lstTarea.ForeColor = SystemColors.WindowText;
             lstTarea.FormattingEnabled = true;
-            lstTarea.Location = new Point(94, 179);
+            lstTarea.Location = new Point(12, 179);
             lstTarea.Name = "lstTarea";
-            lstTarea.Size = new Size(120, 94);
+            lstTarea.Size = new Size(303, 94);
+            lstTarea.Sorted = true;
             lstTarea.TabIndex = 8;
             // 
             // btnCompletar
@@ -126,6 +130,7 @@
             btnCompletar.TabIndex = 9;
             btnCompletar.Text = "Completar";
             btnCompletar.UseVisualStyleBackColor = true;
+            btnCompletar.Click += btnCompletar_Click;
             // 
             // btnEliminar
             // 
@@ -135,6 +140,7 @@
             btnEliminar.TabIndex = 10;
             btnEliminar.Text = "Eliminar";
             btnEliminar.UseVisualStyleBackColor = true;
+            btnEliminar.Click += btnEliminar_Click;
             // 
             // frmGestorDeTareas
             // 
@@ -145,9 +151,9 @@
             Controls.Add(btnCompletar);
             Controls.Add(lstTarea);
             Controls.Add(btnAgregar);
-            Controls.Add(dateTimePicker1);
+            Controls.Add(dtpFecha);
             Controls.Add(cmbPrioridad);
-            Controls.Add(txtTareas);
+            Controls.Add(txtTarea);
             Controls.Add(lblMisTareas);
             Controls.Add(lblFecha);
             Controls.Add(lblPrioridad);
@@ -165,9 +171,9 @@
         private Label lblPrioridad;
         private Label lblFecha;
         private Label lblMisTareas;
-        private TextBox txtTareas;
+        private TextBox txtTarea;
         private ComboBox cmbPrioridad;
-        private DateTimePicker dateTimePicker1;
+        private DateTimePicker dtpFecha;
         private Button btnAgregar;
         private CheckedListBox lstTarea;
         private Button btnCompletar;
